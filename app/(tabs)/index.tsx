@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 import { supabase } from "../../lib/supabase";
 
 export default function Index() {
@@ -25,22 +25,11 @@ export default function Index() {
 }, []);
 
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{message}</Text>
+return (
+  <SafeAreaView className="flex-1 bg-white">
+    <View className="flex-1 items-center justify-center">
+      <Text className="text-lg text-black">{message}</Text>
     </View>
-  );
+  </SafeAreaView>
+);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "white",
-  },
-  text: {
-    fontSize: 18,
-    color: "black",
-  },
-});
