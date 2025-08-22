@@ -28,7 +28,7 @@ export default function Index() {
 return (
   <SafeAreaView className="flex-1 bg-white">
     <View className="flex-1 items-center justify-center">
-      <Text className="text-lg text-black">{message}</Text>
+      {/* <Text className="text-lg text-black">{message}</Text> */}
     </View>
   </SafeAreaView>
 );
